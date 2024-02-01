@@ -157,15 +157,6 @@ body {
     font: bold;
 }
 
-
-
-
-
-
-
-
-
-
 footer {
     width: 100%;
     border-top: 2px solid black;
@@ -184,4 +175,12 @@ footer > ul {
 footer a {
     font-size: 1.2rem;
     color: black;
+}
+
+.link {
+    cursor: pointer;
+    font-size: 1rem;
+    font: bolder;
+    text-decoration: underline;
+    text-underline-offset: 1;
 }
