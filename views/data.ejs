@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+    <div>
+        <h1 class="heading">Know Your City's Weather</h1>
+        <div id="form_comp">
+            <form action="/weather" method="post" class="section">
+                <input type="text" name="cityName" id="cityInput" placeholder='Enter City Name' autocomplete="off"
+                    class="inputcity">
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <%- include('partials/footer') %>

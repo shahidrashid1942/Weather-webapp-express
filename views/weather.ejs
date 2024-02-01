@@ -1,0 +1,73 @@
+<%- include('partials/header') %>
+
+    <div id="weather">
+
+        <div class="weather_upper">
+            <h1>
+                <%= weatherData.name %>
+            </h1>
+            <sub class="coordinates"> (lon: <%= weatherData.coord.lon %> : lat: <%= weatherData.coord.lat %>)</sub>
+        </div>
+
+        <div class="temp_wrap">
+
+            <div class="temp">
+                <h2>
+                    <%= weatherData.main.temp %> &deg;C
+                </h2>
+                <p>
+                    (<%= weatherData.main.feels_like %> &deg;C)
+                </p>
+            </div>
+
+            <div class="temp_min_max">
+                <p class="head_temp">Min/Max</p>
+                <div class="min_max">
+                    <p>
+                        <i class="fa-solid fa-temperature-low">
+                            <%= weatherData.main.temp_min %>
+                        </i>
+                    </p>
+                    &mdash;
+                    <p>
+                        <i class="fa-solid fa-temperature-low">
+                            <%= weatherData.main.temp_max %>
+                        </i>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="description">
+            <p>
+                <%= weatherData.weather[0].description %>
+            </p>
+            <img src="https://openweathermap.org/img/wn/<%= weatherData.weather[0].icon %>@2x.png" alt="Weather Icon">
+        </div>
+
+        <div class="others">
+            <div class="humidity">
+                <p>Humidity</p>
+                <p>
+                    <i class="fa-solid fa-droplet">
+                        <%= weatherData.main.humidity %>
+                    </i>
+                </p>
+            </div>
+            <div class="wind">
+                <p>Wind</p>
+                <p>
+                    <%= weatherData.wind.speed %>
+                </p>
+                <p>
+                    (<%= weatherData.wind.deg %> &deg;)
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <%- include('partials/footer') %>
